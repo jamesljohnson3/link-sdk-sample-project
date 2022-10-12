@@ -1,6 +1,6 @@
 # link-sdk-sample-project
 
-This is a sample project adding a rudimentry implementation of [Link-SDK](](https://www.npmjs.com/package/@codat/link-sdk)) to a default [create-react-app](https://reactjs.org/docs/create-a-new-react-app.html) project.
+This is a sample project adding a rudimentry implementation of [Link-SDK](https://www.npmjs.com/package/@codat/link-sdk) to a default [create-react-app](https://reactjs.org/docs/create-a-new-react-app.html) project.
 
 [Codat docs](https://docs.codat.io/docs/authorize-embedded-link) | [NPM](https://www.npmjs.com/package/@codat/link-sdk)
 
