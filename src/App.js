@@ -38,7 +38,6 @@ const App = () => {
               <CodatLink
                 companyId={companyId}
                 onSuccess={(newConnectionId) => setConnections([...connections, newConnectionId.connectionId])}
-                onDone={() => setComplete(true)}
                 onClose={() => reset()}
                 onError={(error) => {
                   setOpen(false);
