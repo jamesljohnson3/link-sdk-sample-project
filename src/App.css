@@ -40,3 +40,28 @@
 .Modal {
   position: absolute;
 }
+
+form {
+  margin-bottom: 1em;
+}
+
+label {
+  margin-right: 1em;
+}
+
+/* Delete after current CSS rules fixed */
+#app-link h1,
+#app-link h2,
+#app-link h3,
+#app-link h4,
+div[class*="SourceTypeSummary"] {
+  color: var(--color-ui-interface-dark);
+}
+
+div[class*="ConnectionComplete"] {
+  padding-bottom: 0;
+}
+
+div[class*="Button_button"] {
+  margin-bottom: 0.8em;
+}

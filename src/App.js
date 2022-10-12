@@ -29,7 +29,7 @@ const App = () => {
     <div className="App">
       <header className="App-header">
         <form>
-          <label for="companyId">Company ID:</label>
+          <label htmlFor="companyId">Company ID:</label>
           <input type="text" id="companyId" name="companyId" value={companyId} onChange={(e) => setCompanyId(e.target.value)}/>
         </form>
 
