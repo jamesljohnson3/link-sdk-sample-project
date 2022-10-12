@@ -17,7 +17,7 @@ Go to the Portal and [create a new company](https://docs.codat.io/docs/portal-ma
 
 > For simplicity, this project doesn't implement the creation of a company via Codat's API. In a real application you would [do this programmatically](https://docs.codat.io/reference/createcompany) via `POST /companies`.
 
-Follow the flow. The integrations available will depend on your settings - your Codat client should have sandbox integrations.
+Follow the flow. The integrations available will depend on your settings - your Codat client should have sandbox integrations by default.
 
 ---
 
