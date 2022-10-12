@@ -49,6 +49,11 @@ label {
   margin-right: 1em;
 }
 
+hr {
+  margin-top: 1em;
+  width: 30px;
+}
+
 /* Delete after current CSS rules fixed */
 #app-link h1,
 #app-link h2,
