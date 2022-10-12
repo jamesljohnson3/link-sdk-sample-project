@@ -6,13 +6,25 @@ This is a sample project adding a rudimentry implementation of [Link-SDK](https:
 
 ## Using the project
 
+Clone, install dependencies, and run the project.
+
 ```
-npm install && npm run start
+npm install
+npm run start
 ```
+
+Go to the Portal and [create a new company](https://docs.codat.io/docs/portal-managing-companies#add-a-new-company), and copy the ID. Paste this ID into the text box and click `Start connecting`
+
+> For simplicity, this project doesn't implement the creation of a company via Codat's API. In a real application you would [do this programmatically](https://docs.codat.io/reference/createcompany) via `POST /companies`.
+
+Follow the flow. The integrations available will depend on your settings - your Codat client should have sandbox integrations.
 
 ---
 
+# Context
+
 ## What is Link?
+
 Link is a pre-built, conversion-optimized, and white-labelled authorization journey. Your customers can connect their financial accounts in minutes using Link.
 
 Codat offers you the opportunity to integrate the Hosted Link authorization flow into your existing app, or use our Embedded Link component in your front-end code.
