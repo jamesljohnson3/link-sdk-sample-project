@@ -1,6 +1,6 @@
 {
-  "name": "cra-link-test",
-  "version": "0.1.0",
+  "name": "link-sdk-sample-project",
+  "version": "1.0.1",
   "private": true,
   "dependencies": {
     "@codat/link-sdk": "^1.0.0",
