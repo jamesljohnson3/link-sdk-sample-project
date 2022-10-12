@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+# cra-link-test
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a sample project adding a rudimentry implementation of [Link-SDK](](https://www.npmjs.com/package/@codat/link-sdk)) to a default [create-react-app](https://reactjs.org/docs/create-a-new-react-app.html) project.
 
-## Available Scripts
+[Codat docs](https://docs.codat.io/docs/authorize-embedded-link) | [NPM](https://www.npmjs.com/package/@codat/link-sdk)
 
-In the project directory, you can run:
+## Using the project
 
-### `npm start`
+```
+npm install && npm run start
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## What is Link?
+Link is a pre-built, conversion-optimized, and white-labelled authorization journey. Your customers can connect their financial accounts in minutes using Link.
 
-### `npm test`
+Codat offers you the opportunity to integrate the Hosted Link authorization flow into your existing app, or use our Embedded Link component in your front-end code.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Embedded Link
 
-### `npm run build`
+> Note that Embedded Link is in the beta phase. If you want to use the Embedded Link solution, please [get in touch](mailto:embedded-link@codat.io). 
+> You can also [request features and suggest improvements] (https://portal.productboard.com/codat/7-product-roadmap/c/485-embed-a-pre-built-auth-flow-in-your-website-or-app) to the component.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Use the Embedded Link solution to benefit from a pre-built code component that melds best practices together with our extensive experience in building authorization flows, while seamlessly embedding it into your webpage or front-end application. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Codat's Embedded Link is a React component that neatly sits in your front-end code, can be deployed in a matter of minutes, and enables you to go live within the same day. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+We built Embedded Link to be flexible so that you can integrate and initialize it in any way you want, and provide the user with a native feel of your authorization journey. 
 
-### `npm run eject`
+## Features
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. An authorization flow UI built with our expertise and best practices in mind
+2. Tailored to be flexible and support your custom onboarding and connection journey flows
+3. Fast and easy implementation with a pre-built code component
+4. Authentication in line with oAuth 2.0 standards 
+5. UI that can be [customized](doc:set-up-link) and reflects your [company branding](doc:set-up-your-company-branding)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Prerequisites
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+You should use React 18 when embedding the Link component into your webpage or application.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Getting started with Embedded Link
 
-## Learn More
+Codat's Embedded Link component is published to <a class="external" href="https://www.npmjs.com/package/@codat/link-sdk" target="_blank">npm</a> as a React library. 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+You can install this library using npm:
+```
+npm i @codat/link-sdk
+```
+After installing the library, instantiate it in your own project:
+```
+import { CodatLink } from '@codat/link-sdk';
+import '../node_modules/@codat/link-sdk/index.css';
+```
+## Embedding the Link application
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The component requires a `companyId` parameter to open Link for a specific company. To obtain the `companyId`, first [create a Codat company](https://docs.codat.io/docs/managing-companies) for your customer. We recommend doing that at the same time as your SMB customer signs up within your app. 
 
-### Code Splitting
+From the response to company creation, retain the `companyId` parameter. Then, initialize the Codat Link component in your app:
+```
+<CodatLink
+    companyId="a00a0a00-0a0a-a0aa-0000a00aa00a"
+    onSuccess={(id) => alert('Success: Connection ' + id + ' established')}
+    onClose={() => alert('Closed')}
+    onError={(err) => alert('Error: ' + err)}
+/>
+```
+## Getting help
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+To report issues with this library, please [get in touch](mailto:embedded-link@codat.io) with us.
 
-### Analyzing the Bundle Size
+## Pitfalls
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Disable React.StrictMode
+- We build for React 18
+- The Embedded Link component is not optimized for use on mobile devices.
