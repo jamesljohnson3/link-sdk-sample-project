@@ -5,6 +5,8 @@ import { CodatLink } from '@codat/link-sdk';
 import '../node_modules/@codat/link-sdk/index.css';
 
 const App = () => {
+  document.title = "link-sdk-sample-project";
+
   const [open, setOpen] = useState(false);
   const [complete, setComplete] = useState(false)
   const [connections, setConnections] = useState([])
