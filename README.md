@@ -36,7 +36,7 @@ Codat offers you the opportunity to integrate the Hosted Link authorization flow
 
 Use the Embedded Link solution to benefit from a pre-built code component that melds best practices together with our extensive experience in building authorization flows, while seamlessly embedding it into your webpage or front-end application. 
 
-Codat's Embedded Link is a React component that neatly sits in your front-end code, can be deployed in a matter of minutes, and enables you to go live within the same day. 
+Codat's Embedded Link is a React component that neatly sits in your front-end code, can be deployed in a matter of minutes. 
 
 We built Embedded Link to be flexible so that you can integrate and initialize it in any way you want, and provide the user with a native feel of your authorization journey. 
 
