@@ -73,7 +73,8 @@ From the response to company creation, retain the `companyId` parameter. Then, i
 ```
 <CodatLink
     companyId="a00a0a00-0a0a-a0aa-0000a00aa00a"
-    onSuccess={(id) => alert('Success: Connection ' + id + ' established')}
+    onConnection={(id) => alert('Success: Connection ' + id + ' established')}
+    onFinish={(id) => alert('Finished')}
     onClose={() => alert('Closed')}
     onError={(err) => alert('Error: ' + err)}
 />

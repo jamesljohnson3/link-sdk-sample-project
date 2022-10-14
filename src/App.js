@@ -59,7 +59,11 @@ const App = () => {
           open && <div className="Modal">
               <CodatLink
                 companyId={companyId}
-                onSuccess={(newConnectionId) => setConnections([...connections, newConnectionId.connectionId])}
+                onConnection={(newConnectionId) => setConnections([...connections, newConnectionId.connectionId])}
+                onFinish={() => {
+                  setComplete();
+                  setOpen(false);
+                }}
                 onClose={() => reset()}
                 onError={(error) => {
                   setOpen(false);
